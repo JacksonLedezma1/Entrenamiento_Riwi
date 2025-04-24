@@ -1,2 +1,2 @@
 # python_intro
-Hola mundo
+Aqui encontraras todo mi hermoso recorrido por RIWI <3.
