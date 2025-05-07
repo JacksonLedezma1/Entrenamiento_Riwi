@@ -72,12 +72,7 @@ nombre_funcionario = input("Ingrese su nombre: ")
 print("\nBuenos días", nombre_funcionario)
 
 while True:
-    print("\nLista de funciones")
-    print("1. Añadir productos")
-    print("2. Consultar productos")
-    print("3. Eliminar productos")
-    print("4. Calcular valor total del inventario")
-    print("5. Cerrar programa")
+
 
     print("Elige una opción (1-5): ")
     opcion = ValidarNumINT()
