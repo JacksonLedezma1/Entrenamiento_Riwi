@@ -22,7 +22,7 @@ function modificarCalificacion(nombre, nuevaCalificacion) {
 
 // Función para mostrar todos los estudiantes
 function mostrarEstudiantes() {
-  console.log("Lista de estudiantes:");
+  alert("Lista de estudiantes:");
   for (let nombre in estudiantes) {
     const datos = estudiantes[nombre];
     alert(`- ${nombre}: Edad = ${datos.edad}, Calificación = ${datos.calificacion}`);

@@ -11,6 +11,7 @@ def ValidarNumINT():
             num = int(input())
             if num > 0:
                 return num
+                break
             else:
                 print("El valor debe ser mayor que 0. Intenta de nuevo.")
         except ValueError:
@@ -23,6 +24,7 @@ def ValidarNumFLOAT():
             num = float(input())
             if num > 0:
                 return num
+                break
             else:
                 print("El valor debe ser mayor que 0. Intenta de nuevo.")
         except ValueError:
@@ -34,6 +36,7 @@ def Validarsn():
         respuesta = input("\n¿Desea agregar más productos? (s/n): ").strip().lower()
         if respuesta in ('s', 'n'):
             return respuesta
+            break
         else:
             print("Respuesta no válida. Por favor ingrese 's' o 'n'.")
 
@@ -55,7 +58,6 @@ def eliminar_producto(nombre):
         if producto['Nombre'].lower() == nombre.lower():
             productos.remove(producto)
             print(f"Producto '{nombre}' eliminado correctamente.")
-            return
     print(f"El producto '{nombre}' no se encontró en el inventario.")
 
 # Función de calcular valor total del inventario
