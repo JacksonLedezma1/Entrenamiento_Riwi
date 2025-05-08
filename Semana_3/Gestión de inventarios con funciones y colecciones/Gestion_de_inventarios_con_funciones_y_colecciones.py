@@ -50,8 +50,15 @@ def consultar_productos():
     for producto in productos:
         print("\nEl producto que consultó es:\n")
         print(f"Nombre: {producto['Nombre']}, Precio: ${producto['Precio']}, Cantidad: {producto['Cantidad']}")
-        print("-" * 30)
-
+        print("-" * 40)
+        
+#Funcion para actualizar precios
+def actualizarPrecios(nombre, precio):
+    for producto in productos:
+        if producto['Nombre'].lower() == nombre.lower():
+            producto['Precio']=precio
+            print(f"Precio del producto '{nombre}' actualizado a ${precio}.")
+    print(f"El producto '{nombre}' no se encontró en el inventario.")    
 # Función de eliminar producto
 def eliminar_producto(nombre):
     for producto in productos:
@@ -64,7 +71,7 @@ def eliminar_producto(nombre):
 def calcular_valor_total_del_inventario():
     valor_producto = lambda producto: producto['Precio'] * producto['Cantidad']
     valor_total = sum(map(valor_producto, productos))
-    print(f"\nEl valor total del inventario es: ${valor_total}")
+    print(f"\nValor total del inventario: ${valor_total}")
 
 ##################################################################################################
 # Main, base del programa
@@ -76,9 +83,10 @@ while True:
     print("\nLista de funciones")
     print("1. Añadir productos")
     print("2. Consultar productos")
-    print("3. Eliminar productos")
-    print("4. Calcular valor total del inventario")
-    print("5. Cerrar programa")
+    print("3. Actualizar precio")
+    print("4. Eliminar productos")
+    print("5. Calcular valor total del inventario")
+    print("6. Cerrar programa")
 
     print("Elige una opción (1-5): ")
     opcion = ValidarNumINT()
@@ -99,6 +107,12 @@ while True:
         print(f"\nHola {nombre_funcionario}, bienvenido a la función de consultar productos")
         consultar_productos()
     elif opcion == 3:
+        print("Ingrese el nombre del producto: ")
+        nombre = input().strip()
+        print("Ingrese el nuevo valor del producto: ")
+        precio = ValidarNumFLOAT()
+        actualizarPrecios(nombre,precio)
+    elif opcion == 4:
         print(f"\nHola {nombre_funcionario}, bienvenido a la función de eliminar productos")
         print("\nInventario actual:")
         for i, producto in enumerate(productos, start=1):
@@ -106,9 +120,11 @@ while True:
         print("\nIngrese el nombre del producto a eliminar: ")
         nombre = input().strip()
         eliminar_producto(nombre)
-    elif opcion == 4:
+    elif opcion == 5:
         print(f"\nHola {nombre_funcionario}, bienvenido a la función de calcular el total")
         calcular_valor_total_del_inventario()
-    elif opcion == 5:
+    elif opcion == 6:
         print("\nHasta luego.....")
         break
+    else:
+            print("Opción no válida. Intente de nuevo.")
