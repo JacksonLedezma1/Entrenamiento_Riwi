@@ -117,16 +117,23 @@ while True:
         print(f"\nHola {nombre_funcionario}, bienvenido a la función de consultar productos")
         consultar_productos()
     elif opcion == 3:
-        nombre = input("Ingrese el nombre del producto: ").strip()
-        precio = ValidarNumFLOAT()
-        actualizarPrecios(nombre, precio)
+        while True:
+            print(f"\nHola {nombre_funcionario}, bienvenido a la función de actualizar precios")
+            nombre = input("Ingrese el nombre del producto: ").strip()
+            precio = ValidarNumFLOAT()
+            actualizarPrecios(nombre, precio)
+            if Validarsn() == 'n':
+                break
     elif opcion == 4:
-        print(f"\nHola {nombre_funcionario}, bienvenido a la función de eliminar productos")
-        print("\nInventario actual:")
-        for i, producto in enumerate(productos, start=1):
-            print(f"{i}. {producto['Nombre']} - Precio: ${producto['Precio']} - Cantidad: {producto['Cantidad']}")
-        nombre = input("\nIngrese el nombre del producto a eliminar: ").strip()
-        eliminar_producto(nombre)
+        while True:
+            print(f"\nHola {nombre_funcionario}, bienvenido a la función de eliminar productos")
+            print("\nInventario actual:")
+            for i, producto in enumerate(productos, start=1):
+                print(f"{i}. {producto['Nombre']} - Precio: ${producto['Precio']} - Cantidad: {producto['Cantidad']}")
+            nombre = input("\nIngrese el nombre del producto a eliminar: ").strip()
+            eliminar_producto(nombre)
+            if Validarsn() == 'n':
+                break
     elif opcion == 5:
         print(f"\nHola {nombre_funcionario}, bienvenido a la función de calcular el total")
         calcular_valor_total_del_inventario()
