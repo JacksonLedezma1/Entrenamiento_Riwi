@@ -1,3 +1,4 @@
+import re
 productos = [
     {'Nombre': "Laptop", 'Precio': 800, 'Cantidad': 5},
     {'Nombre': "Mouse", 'Precio': 20, 'Cantidad': 50},
@@ -21,8 +22,7 @@ def ValidarNumINT():
 def ValidarNumFLOAT():
     while True:
         entrada = input()
-        try_convert = entrada.replace('.', '', 1)
-        if try_convert.isdigit() and entrada.count('.') <= 1:
+        if entrada.replace('.', '', 1).isdigit() and entrada.count('.') <= 1:
             num = float(entrada)
             if num > 0:
                 return num
@@ -34,11 +34,22 @@ def ValidarNumFLOAT():
 # Validar respuesta sí/no
 def Validarsn():
     while True:
-        respuesta = input("\n¿Desea agregar más productos? (s/n): ").strip().lower()
+        respuesta = input("\n¿Desea continuar? (s/n): ").strip().lower()
         if respuesta in ('s', 'n'):
             return respuesta
         else:
             print("Respuesta no válida. Por favor ingrese 's' o 'n'.")
+
+
+def validar_letras():
+    patron = r"^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\s]+$"
+    while True:
+        texto = input("")
+        if re.fullmatch(patron, texto):
+            return texto
+        else:
+            print("Error: Solo se permiten letras.")
+
 
 # Verifica si el producto ya existe
 def producto_existe(nombre):
@@ -83,7 +94,8 @@ def eliminar_producto(nombre):
 
 # Calcular valor total
 def calcular_valor_total_del_inventario():
-    valor_total = sum(p['Precio'] * p['Cantidad'] for p in productos)
+    valor_producto = lambda producto: producto['Precio'] * producto['Cantidad']
+    valor_total = sum(map(valor_producto, productos))
     print(f"\nValor total del inventario: ${valor_total}")
 
 ##################################################################################################
@@ -107,8 +119,11 @@ while True:
     if opcion == 1:
         while True:
             print(f"Hola {nombre_funcionario}, bienvenido a la función de agregar productos")
-            nombre = input("Ingrese el nombre del producto: ").strip()
+            print("Ingrese el nombre del producto: ")
+            nombre = input().strip()
+            print("Ingrese el valor del producto: ")
             precio = ValidarNumFLOAT()
+            print("Ingrese la cantidad de producto: ")
             cantidad = ValidarNumINT()
             Añadir_productos(nombre, precio, cantidad)
             if Validarsn() == 'n':
@@ -117,23 +132,19 @@ while True:
         print(f"\nHola {nombre_funcionario}, bienvenido a la función de consultar productos")
         consultar_productos()
     elif opcion == 3:
-        while True:
-            print(f"\nHola {nombre_funcionario}, bienvenido a la función de actualizar precios")
-            nombre = input("Ingrese el nombre del producto: ").strip()
-            precio = ValidarNumFLOAT()
-            actualizarPrecios(nombre, precio)
-            if Validarsn() == 'n':
-                break
+        print("Ingrese el nombre del producto: ")
+        nombre = input().strip()
+        print("Ingrese el nuevo valor del producto: ")
+        precio = ValidarNumFLOAT()
+        actualizarPrecios(nombre, precio)
     elif opcion == 4:
-        while True:
-            print(f"\nHola {nombre_funcionario}, bienvenido a la función de eliminar productos")
-            print("\nInventario actual:")
-            for i, producto in enumerate(productos, start=1):
-                print(f"{i}. {producto['Nombre']} - Precio: ${producto['Precio']} - Cantidad: {producto['Cantidad']}")
-            nombre = input("\nIngrese el nombre del producto a eliminar: ").strip()
-            eliminar_producto(nombre)
-            if Validarsn() == 'n':
-                break
+        print(f"\nHola {nombre_funcionario}, bienvenido a la función de eliminar productos")
+        print("\nInventario actual:")
+        for i, producto in enumerate(productos, start=1):
+            print(f"{i}. {producto['Nombre']} - Precio: ${producto['Precio']} - Cantidad: {producto['Cantidad']}")
+        print("\nIngrese el nombre del producto a eliminar: ")
+        nombre = input().strip()
+        eliminar_producto(nombre)
     elif opcion == 5:
         print(f"\nHola {nombre_funcionario}, bienvenido a la función de calcular el total")
         calcular_valor_total_del_inventario()
@@ -142,3 +153,4 @@ while True:
         break
     else:
         print("Opción no válida. Intente de nuevo.")
+        
