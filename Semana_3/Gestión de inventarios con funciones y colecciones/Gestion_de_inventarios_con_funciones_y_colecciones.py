@@ -73,6 +73,7 @@ def consultar_productos():
         print("\nEl producto que consultó es:\n")
         print(f"Nombre: {producto['Nombre']}, Precio: ${producto['Precio']}, Cantidad: {producto['Cantidad']}")
         print("-" * 40)
+    
 
 # Actualizar precios
 def actualizarPrecios(nombre, precio):
