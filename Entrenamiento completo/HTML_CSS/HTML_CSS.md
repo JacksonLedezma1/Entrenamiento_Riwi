@@ -1,4 +1,4 @@
-## Curso Completo de HTML y CSS — Versión Detallada por Módulos
+## Curso Completo de HTML y CSS 
 
 Este curso está diseñado para personas con conocimientos previos en programación que deseen dominar HTML y CSS desde sus fundamentos hasta técnicas avanzadas de desarrollo web moderno. Cada módulo está estructurado en:
 
