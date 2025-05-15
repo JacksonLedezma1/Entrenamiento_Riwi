@@ -39,7 +39,60 @@ Estructura básica de un documento HTML5:
 
 Etiquetas semánticas importantes:
 
-* `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`
+* \`\``<header>`: Define la cabecera de un documento o sección. Suele contener el título, logotipo o menú superior.
+
+  ```html
+  <header>
+    <h1>Mi sitio</h1>
+    <p>Subtítulo o eslogan</p>
+  </header>
+  ```
+
+* \`\``<nav>`: Señala un bloque de enlaces de navegación principal. Facilita la orientación del usuario.
+
+  ```html
+  <nav>
+    <ul>
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#about">Sobre</a></li>
+    </ul>
+  </nav>
+  ```
+
+* \`\``<main>`: Contiene el contenido principal único de la página. Debe haber solo un `<main>` por documento.
+
+  ```html
+  <main>
+    <h2>Contenido Principal</h2>
+    <p>Texto central del sitio.</p>
+  </main>
+  ```
+
+* \`\``<section>`: Agrupa contenido temáticamente relacionado. Puede incluir su propio encabezado.
+
+  ```html
+  <section id="servicios">
+    <h3>Servicios</h3>
+    <p>Descripción de servicios.</p>
+  </section>
+  ```
+
+* \`\``<article>`: Representa contenido independiente y autocontenible, como un post de blog o noticia.
+
+  ```html
+  <article>
+    <h4>Título del Artículo</h4>
+    <p>Texto del artículo.</p>
+  </article>
+  ```
+
+* \`\``<footer>`: Define el pie de página de un documento o sección. Suele incluir créditos, enlaces legales o contacto.
+
+  ```html
+  <footer>
+    <p>&copy; 2025 Mi Empresa</p>
+  </footer>
+  ```
 
 #### 🧪 Ejemplo:
 
@@ -54,7 +107,7 @@ Etiquetas semánticas importantes:
 
 #### 📝 Ejercicios sugeridos:
 
-1. Crea una página HTML con `<header>`, `<nav>`, `<main>`, y `<footer>`.
+1. Crea una página HTML con `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` y `<footer>`.
 2. Usa etiquetas semánticas para estructurar una noticia.
 
 ---
@@ -68,11 +121,19 @@ Etiquetas semánticas importantes:
 
 #### 📚 Teoría Detallada:
 
-**Texto:** `<h1>` a `<h6>`, `<p>`, `<strong>`, `<em>`, `<br>`, `<hr>`
+##### Etiquetas de Texto:
 
-**Enlaces:** `<a href="url">Texto</a>`
+* **`<h1>` a `<h6>`**: Encabezados jerárquicos del más importante (`<h1>`) al menos importante (`<h6>`).
+* **`<p>`**: Define un párrafo.
+* **`<strong>`**: Enfatiza texto como importante (negrita).
+* **`<em>`**: Da énfasis leve o sutil (cursiva).
+* **`<br>`**: Salto de línea.
+* **`<hr>`**: Línea horizontal que separa bloques de contenido.
 
-**Imágenes:** `<img src="ruta" alt="Descripción">`
+##### Enlaces e Imágenes:
+
+* **`<a href="url">Texto</a>`**: Crea un enlace.
+* **`<img src="imagen.jpg" alt="Descripción">`**: Muestra una imagen.
 
 **Multimedia:**
 
@@ -112,8 +173,14 @@ Etiquetas semánticas importantes:
 * `<li>`: ítem de lista
 
 **Tablas:**
+Las tablas permiten organizar datos en filas y columnas:
 
-* `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`
+* **`<table>`**: Define una tabla.
+* **`<thead>`**: Encabezado de la tabla.
+* **`<tbody>`**: Cuerpo de la tabla.
+* **`<tr>`**: Fila de la tabla (table row).
+* **`<th>`**: Encabezado de columna.
+* **`<td>`**: Celda de datos.
 
 **Otras etiquetas útiles:**
 
