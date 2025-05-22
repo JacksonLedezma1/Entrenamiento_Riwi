@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/practica1.css" type="text/css">
+    <title>Basic_HTML</title>
+</head>
+<body>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bienvenido a la página principal.</p>
+        </section>
+
+        <section id="acerca">
+            <h2>Acerca de</h2>
+            <p>Información sobre nosotros.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Formulario de contacto o datos de contacto.</p>
+        </section>
+    </section>
+
+    <section>
+        <h1>Welcome</h1>
+        <p>This is my first page in HTML.</p>
+    </section>
+
+    <section>
+        <h2>Favorite fruits</h2>
+        <ul>
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Cherry</li>
+        </ul>
+        <h2>Steps to make a coffee</h2>
+        <ol>
+            <li>Boil water</li>
+            <li>Add coffee grounds</li>
+            <li>Pour water over coffee</li>
+            <li>Let it steep</li>
+            <li>Enjoy your coffee</li>
+        </ol>
+    </section>
+    <section>
+       <a href="https://www.google.com" class="button">Google</a>
+
+       <a href="contact.html" class="button">Contact</a>
+
+    </section> 
+    <section>
+        <a href="https://github.com">
+            <img src="assets/GitHub.jpeg" alt="GitHub Logo" width="300" height="200">
+        </a>
+    </section>
+
+    <section class="video">
+        <video width="400" height="300" controls>
+            <source src="assets/espalda.mp4" type="video/mp4">
+        </video>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CJV3smN6-qs?si=RUDMO9MTxAsOOCDn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <section>
+        <table class="table">
+            <caption>Lista de personas</caption>
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+            <tr>
+                <td>Juan</td>
+                <td>25</td>
+                <td>Madrid</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>30</td>
+                <td>Barcelona</td>
+            </tr>
+            <tr>
+                <td>Pedro</td>
+                <td>22</td>
+                <td>Valencia</td>
+            </tr>
+        </table>
+    </section>
+
+    <!--Formulario con varios campos-->
+    <section>
+        <button type="button" onclick="document.getElementById('formulario').style.display='block'">Formulario</button>
+        <div id="formulario" style="display:none;">
+            <form action="#" method="post">
+                <label for="nombre">name:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">email:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="mensaje">message:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">send</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

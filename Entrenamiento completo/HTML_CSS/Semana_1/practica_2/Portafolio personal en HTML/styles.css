@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif
+}
+.about {
+      width: 900px;
+      height: 400px;
+      background-color: rgb(255, 255, 255); /* Ejemplo de color de fondo */
+      border: 2px dashed rgb(0, 0, 0);
+      border-radius: 10px;
+      padding: 10px;
+      text-align: justify;
+      display: flex;
+      margin: auto;
+    }
+
+.about img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin: auto;
+    }
+
+    .about h2 {
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+      text-decoration: double underline;
+      text-align: center;
+      margin: auto;
+    }
+
+    .about p {
+      color: rgb(0, 0, 0);
+      font-size: 16px;
+      text-align: justify;
+      text-transform: capitalize;
+      margin: auto;
+      padding: 10px;
+    
+    }
