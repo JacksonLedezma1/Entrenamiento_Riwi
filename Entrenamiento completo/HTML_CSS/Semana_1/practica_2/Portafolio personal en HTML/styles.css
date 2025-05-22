@@ -1,12 +1,14 @@
 body {
-  background-color: rgb(255, 255, 255);
-  font-family: 'Times New Roman', Times, serif
+  background-image: radial-gradient(circle, rgb(249, 0, 0), rgb(8, 8, 8));
+  
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(255, 255, 255);
 }
 .about {
       width: 900px;
       height: 400px;
-      background-color: rgb(255, 255, 255); /* Ejemplo de color de fondo */
-      border: 2px dashed rgb(0, 0, 0);
+      background-image: linear-gradient(#6b5c5c, #FFFFFF);
+      border: 2px solid rgb(0, 0, 0);
       border-radius: 10px;
       padding: 10px;
       text-align: justify;
@@ -38,8 +40,32 @@ body {
       padding: 10px;
     
     }
+.skill_image {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin: auto;
+}
 
 progress[value] {
   width: 250px;
   height: 20px;
+}
+
+.skills-list {
+  display: grid;
+  padding: auto;
+  margin: auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skill-itms {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: auto;
+  text-align: center;
+  background-color: black;
+  color: rgb(255, 255, 255);
 }
