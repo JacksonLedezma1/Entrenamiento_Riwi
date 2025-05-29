@@ -292,3 +292,293 @@ document.getElementById("miElemento").innerHTML = "Nuevo texto";
 5. **Construye proyectos reales**: La práctica hace al maestro
 
 ¡Recuerda que todos empezamos desde cero! Con dedicación y práctica, podrás crear sitios web increíbles. 🌟 
+
+# Documentación del Proyecto de Procesamiento de Imágenes 📸
+
+## Tabla de Contenidos
+1. [Descripción General del Proyecto](#descripción-general-del-proyecto)
+2. [Estructura del Proyecto](#estructura-del-proyecto)
+3. [Guía Detallada del Código](#guía-detallada-del-código)
+4. [Estilos y Diseño Visual](#estilos-y-diseño-visual)
+5. [Funcionalidades Principales](#funcionalidades-principales)
+6. [Guía de Instalación y Uso](#guía-de-instalación-y-uso)
+7. [Tecnologías Utilizadas](#tecnologías-utilizadas)
+8. [Mejores Prácticas Implementadas](#mejores-prácticas-implementadas)
+
+## Descripción General del Proyecto
+
+Este proyecto es una aplicación web interactiva para el procesamiento de imágenes que permite a los usuarios:
+- Cargar imágenes desde su dispositivo
+- Visualizar diferentes técnicas de detección de bordes
+- Comprender cómo funcionan los algoritmos de procesamiento de imágenes
+- Ver el código fuente en Python y JavaScript
+
+### Características Principales
+- Interfaz de usuario intuitiva y moderna
+- Procesamiento de imágenes en tiempo real
+- Múltiples algoritmos de detección de bordes
+- Diseño responsive para todos los dispositivos
+- Documentación detallada del código
+
+## Estructura del Proyecto
+
+```
+Procesamiento_de_imagenes/
+├── Index.html           # Archivo principal HTML
+├── styles.css          # Estilos CSS
+├── DOCUMENTATION.md    # Documentación del proyecto
+├── js/                 # Directorio de scripts JavaScript
+└── assets/            # Directorio de recursos
+    └── img/           # Imágenes y logos
+```
+
+### Desglose de Archivos
+
+#### 1. Index.html
+El archivo HTML principal está estructurado en las siguientes secciones:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos y enlaces -->
+</head>
+<body>
+    <!-- Header con información de perfil -->
+    <header class="header">...</header>
+    
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <!-- Título de la página -->
+        <!-- Información del proyecto -->
+        <!-- Procesador de imágenes -->
+        <!-- Explicación del código -->
+    </main>
+</body>
+</html>
+```
+
+##### Componentes Principales:
+
+1. **Header (Cabecera)**
+   - Logo personal
+   - Información de perfil
+   - Enlaces a redes sociales
+   ```html
+   <div class="profile-section">
+       <img src="./assets/img/Logo.png" alt="Logo Personal" class="logo">
+       <div class="profile-info">
+           <h3>Jackson Ledezma</h3>
+           <p class="subtitle">Desarrollador Web</p>
+       </div>
+   </div>
+   ```
+
+2. **Sección de Información del Proyecto**
+   - Descripción del proyecto
+   - Pasos del proceso
+   - Herramientas utilizadas
+   ```html
+   <section class="project-info">
+       <div class="info-card">...</div>
+       <div class="steps-card">...</div>
+       <div class="tools-card">...</div>
+   </section>
+   ```
+
+3. **Procesador de Imágenes**
+   - Área de carga de imágenes
+   - Visualización de resultados
+   ```html
+   <section class="image-processor">
+       <div class="upload-section">...</div>
+       <div class="canvas-container">...</div>
+   </section>
+   ```
+
+4. **Sección de Código**
+   - Implementación en Python
+   - Implementación en JavaScript
+   ```html
+   <section class="code-explanation">
+       <div class="code-comparison">...</div>
+   </section>
+   ```
+
+## Guía Detallada del Código
+
+### Estilos CSS (styles.css)
+
+#### 1. Estilos Base
+```css
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    min-height: 100vh;
+}
+```
+- Fondo con gradiente suave
+- Tipografía moderna y legible
+- Altura mínima para contenido completo
+
+#### 2. Header y Navegación
+```css
+.header {
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 0;
+}
+```
+- Diseño limpio y moderno
+- Sombras sutiles
+- Transiciones suaves
+
+#### 3. Tarjetas de Información
+```css
+.info-card, .steps-card, .tools-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+```
+- Efecto de elevación al hover
+- Bordes redondeados
+- Fondo semi-transparente
+
+#### 4. Área de Procesamiento de Imágenes
+```css
+.canvas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+```
+- Layout responsive con CSS Grid
+- Espaciado consistente
+- Adaptable a diferentes tamaños de pantalla
+
+### Características de Diseño Responsive
+
+#### 1. Media Queries Principales
+```css
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .canvas-container {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
+#### 2. Adaptaciones para Dispositivos Móviles
+```css
+@media (max-width: 480px) {
+    .profile-section {
+        flex-direction: column;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+```
+
+## Funcionalidades Principales
+
+### 1. Carga de Imágenes
+- Selector de archivos personalizado
+- Validación de tipos de archivo
+- Previsualización instantánea
+
+### 2. Procesamiento de Imágenes
+- Detección de bordes Sobel
+- Detección Laplaciana
+- Detección Canny
+- Histograma de Gradientes (HOG)
+
+### 3. Visualización de Resultados
+- Canvas HTML5 para renderizado
+- Múltiples vistas simultáneas
+- Actualización en tiempo real
+
+## Guía de Instalación y Uso
+
+1. **Requisitos Previos**
+   - Navegador web moderno
+   - Conexión a internet para cargar fuentes
+
+2. **Instalación**
+   - Clonar el repositorio
+   - No requiere instalación de dependencias adicionales
+
+3. **Uso**
+   ```bash
+   # Abrir el archivo index.html en un navegador
+   # O servir los archivos usando un servidor web local
+   ```
+
+## Tecnologías Utilizadas
+
+1. **Frontend**
+   - HTML5
+   - CSS3
+   - JavaScript (ES6+)
+
+2. **Procesamiento de Imágenes**
+   - Canvas API
+   - WebGL (para optimización)
+
+3. **Herramientas de Desarrollo**
+   - Visual Studio Code
+   - Git para control de versiones
+
+## Mejores Prácticas Implementadas
+
+### 1. Optimización de Rendimiento
+- Lazy loading de imágenes
+- Minificación de CSS
+- Optimización de assets
+
+### 2. Accesibilidad
+- Etiquetas semánticas HTML5
+- Atributos ARIA donde necesario
+- Alto contraste en textos
+
+### 3. Mantenibilidad
+- Código modular
+- Comentarios descriptivos
+- Nombres de variables significativos
+
+### 4. Seguridad
+- Validación de tipos de archivo
+- Sanitización de inputs
+- Manejo seguro de datos
+
+## Conclusión
+
+Este proyecto demuestra la implementación de técnicas modernas de procesamiento de imágenes en un entorno web, combinando una interfaz de usuario intuitiva con algoritmos eficientes de procesamiento. La documentación proporciona una guía completa para entender, usar y potencialmente extender el proyecto.
+
+---
+
+## Apéndice: Recursos Adicionales
+
+### Enlaces Útiles
+- [MDN Web Docs - Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+- [Web.dev - Image Processing](https://web.dev/image-processing/)
+- [CSS-Tricks - Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+### Contribución
+Para contribuir al proyecto:
+1. Fork el repositorio
+2. Crea una rama para tu feature
+3. Envía un pull request
+
+### Licencia
+Este proyecto está bajo la licencia MIT. Ver el archivo LICENSE para más detalles. 
