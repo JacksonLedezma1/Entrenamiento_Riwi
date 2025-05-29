@@ -1,0 +1,679 @@
+/* Estilos base */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    min-height: 100vh;
+}
+
+/* Header mejorado */
+.header {
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    padding: 2px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.profile-info h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    margin: 0.3rem 0;
+    font-size: 1rem;
+}
+
+.bio {
+    color: #95a5a6;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.social-icons {
+    width: 35px;
+    height: 35px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.social-name {
+    color: #2c3e50;
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-link:hover .social-icons {
+    transform: scale(1.1);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.social-link:hover .social-name {
+    opacity: 1;
+}
+
+/* Estilos específicos para cada red social */
+.github:hover {
+    background-color: rgba(51, 51, 51, 0.1);
+}
+
+.linkedin:hover {
+    background-color: rgba(0, 119, 181, 0.1);
+}
+
+.instagram:hover {
+    background: linear-gradient(45deg, 
+        rgba(240, 148, 51, 0.1) 0%, 
+        rgba(230, 104, 60, 0.1) 25%, 
+        rgba(220, 39, 67, 0.1) 50%, 
+        rgba(204, 35, 102, 0.1) 75%, 
+        rgba(188, 24, 136, 0.1) 100%
+    );
+}
+
+.page-title {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.page-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* Main Content mejorado */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.project-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-card, .steps-card, .tools-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.info-card:hover, .steps-card:hover, .tools-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h2, .steps-card h2, .tools-card h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-card p {
+    color: #34495e;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Steps mejorados */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.step:hover {
+    transform: translateX(10px);
+    background: linear-gradient(to right, #f1f3f5, #ffffff);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3);
+    flex-shrink: 0;
+}
+
+.step p {
+    margin: 0;
+    color: #2c3e50;
+    font-weight: 500;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Tools mejorados */
+.tool-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tool-item:hover {
+    transform: translateX(10px);
+    background: linear-gradient(to right, #f1f3f5, #ffffff);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tool-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.tool-item span {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Responsive mejorado */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .profile-section {
+        flex-direction: column;
+    }
+
+    .social-links {
+        margin-top: 1rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .project-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-card, .steps-card, .tools-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.info-card, .steps-card, .tools-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.info-card { animation-delay: 0.2s; }
+.steps-card { animation-delay: 0.4s; }
+.tools-card { animation-delay: 0.6s; }
+
+/* Estilos del procesador de imágenes */
+.image-processor {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.image-processor h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.upload-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.upload-button {
+    background: #4f46e5;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+#imageInput {
+    display: none;
+}
+
+.canvas-container {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    animation: fadeIn 0.5s ease-out;
+    margin-top: 2rem;
+}
+
+.canvas-container.visible {
+    display: grid;
+}
+
+.canvas-wrapper {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.canvas-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+.canvas-wrapper h3 {
+    margin-bottom: 1rem;
+    color: #1f2937;
+    font-size: 1.2rem;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    background: white;
+}
+
+@media (max-width: 1400px) {
+    .canvas-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .canvas-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para la sección de explicación del código */
+.code-explanation {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.code-explanation h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.code-comparison {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.code-section {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e9ecef;
+    flex: 1;
+    max-width: 550px;
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-section h3 {
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f8f9fa;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.code-content {
+    flex: 1;
+    max-height: 400px;
+    border-radius: 0.5rem;
+    background: #1e1e1e;
+    position: relative;
+}
+
+.code-block {
+    background: #1e1e1e;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 0.8rem;
+    background: #1e1e1e;
+    box-sizing: border-box;
+    white-space: pre;
+    height: 100%;
+    overflow: auto;
+    max-height: 400px;
+}
+
+.code-block code {
+    font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #d4d4d4;
+    white-space: pre;
+    tab-size: 4;
+}
+
+/* Mejoras en el scrollbar */
+.code-block pre::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.code-block pre::-webkit-scrollbar-track {
+    background: #2d2d2d;
+    border-radius: 3px;
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 3px;
+}
+
+.code-block pre::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.code-block pre::-webkit-scrollbar-corner {
+    background: #2d2d2d;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .code-comparison {
+        flex-direction: column;
+        align-items: center;
+        max-width: 600px;
+    }
+    
+    .code-section {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+    }
+
+    .code-content {
+        max-height: 350px;
+    }
+
+    .code-block pre {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .code-explanation {
+        padding: 1rem;
+    }
+    
+    .code-section {
+        padding: 0.8rem;
+    }
+
+    .code-content {
+        max-height: 300px;
+    }
+
+    .code-block pre {
+        max-height: 300px;
+    }
+    
+    .code-block code {
+        font-size: 0.85rem;
+    }
+}
+
+/* Estilos para la sección de gradientes */
+.gradient-explanation {
+    margin-top: 3rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-explanation h3 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.gradient-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.gradient-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e9ecef;
+}
+
+.gradient-section h4 {
+    color: #2c3e50;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gradient-section .code-block {
+    height: 300px;
+    margin-bottom: 1rem;
+}
+
+.gradient-section .code-block pre {
+    padding: 1rem;
+}
+
+.gradient-section .code-block code {
+    font-size: 0.9rem;
+}
+
+.gradient-explanation-text {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.gradient-explanation-text ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.gradient-explanation-text li {
+    color: #4a5568;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .gradient-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .gradient-section .code-block {
+        height: 250px;
+    }
+}
+
+/* Clases específicas para los gradientes */
+.header-gradient {
+    background: linear-gradient(to right, #ffffff, #f8f9fa);
+    border: 1px solid #e9ecef;
+}
+
+.step-gradient {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border: 1px solid #e9ecef;
+}
+
+.number-gradient {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.title-gradient {
+    background: linear-gradient(to right, #3498db, #2ecc71);
+}
+
+/* Responsive para la sección de código */
+@media (max-width: 768px) {
+    .code-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .code-block {
+        font-size: 0.8rem;
+    }
+}

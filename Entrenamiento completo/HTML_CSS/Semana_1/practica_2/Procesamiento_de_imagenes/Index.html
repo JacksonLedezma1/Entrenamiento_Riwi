@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Procesamiento de imagenes</title>
+</head>
+<body>
+    <header class="header">
+        <section class="header-content">
+            <div class="profile-section">
+                <img src="./assets/img/Logo.png" alt="Logo Personal" class="logo">
+                <div class="profile-info">
+                    <h3>Jackson Ledezma</h3>
+                    <p class="subtitle">Desarrollador Web</p>
+                    <p class="bio">Apasionado por la tecnología y el desarrollo web</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/JacksonLedezma1" target="_blank" class="social-link github">
+                    <img src="./assets/img/GitHub.png" alt="GitHub" class="social-icons">
+                    <span class="social-name">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/jackson-olier-ledezma-murillo-881b88255/" target="_blank" class="social-link linkedin">
+                    <img src="./assets/img/Linkedin.png" alt="LinkedIn" class="social-icons">
+                    <span class="social-name">LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/jackson_ledezma01/" target="_blank" class="social-link instagram">
+                    <img src="./assets/img/Instagram.png" alt="Instagram" class="social-icons">
+                    <span class="social-name">Instagram</span>
+                </a>
+            </div>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Procesamiento de imágenes</h1>
+        <section class="project-info">
+            <div class="info-card">
+                <h2>🔍 ¿Qué hace este proyecto?</h2>
+                <p>Este es un detector de bordes que usa Python para procesar imágenes. Puede identificar los contornos y formas en cualquier imagen que le proporciones.</p>
+            </div>
+
+            <div class="steps-card">
+                <h2>📝 Paso a paso</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Carga tu imagen</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>La imagen se convierte a escala de grises</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Se aplica el detector de bordes</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <p>¡Listo! Verás los bordes detectados</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tools-card">
+                <h2>🛠️ Herramientas usadas</h2>
+                <div class="tool-item">
+                    <img src="./assets/img/python.png" alt="Python" class="tool-icon">
+                    <span>Python</span>
+                </div>
+                <div class="tool-item">
+                    <img src="./assets/img/opencv.png" alt="OpenCV" class="tool-icon">
+                    <span>OpenCV</span>
+                </div>
+                <div class="tool-item">
+                    <img src="./assets/img/numpy.png" alt="NumPy" class="tool-icon">
+                    <span>NumPy</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="image-processor">
+            <h2>🖼️ Procesador de Imágenes</h2>
+            <div class="upload-section">
+                <label for="imageInput" class="upload-button">
+                    Seleccionar Imagen
+                </label>
+                <input type="file" id="imageInput" accept="image/*">
+            </div>
+
+            <div class="canvas-container">
+                <div class="canvas-wrapper">
+                    <h3>Imagen Original</h3>
+                    <canvas id="originalCanvas"></canvas>
+                </div>
+                <div class="canvas-wrapper">
+                    <h3>Detección Sobel</h3>
+                    <canvas id="sobelCanvas"></canvas>
+                </div>
+                <div class="canvas-wrapper">
+                    <h3>Detección Laplaciana</h3>
+                    <canvas id="laplacianCanvas"></canvas>
+                </div>
+                <div class="canvas-wrapper">
+                    <h3>Detección Canny</h3>
+                    <canvas id="cannyCanvas"></canvas>
+                </div>
+                <div class="canvas-wrapper">
+                    <h3>Histograma de Gradientes (HOG)</h3>
+                    <canvas id="hogCanvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="code-explanation">
+            <h2>💻 Implementación del Código</h2>
+            
+            <div class="code-comparison">
+                <div class="code-section python">
+                    <h3>🐍 Implementación en Python</h3>
+                    <div class="code-block">
+                        <pre><code>import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from skimage.feature import hog
+from skimage import exposure
+
+def process_image(image_path):
+    # Lectura de imagen
+    image = cv2.imread(image_path)
+    
+    # Conversión a escala de grises
+    gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    
+    # Aplicar desenfoque gaussiano
+    blurred_image = cv2.GaussianBlur(gray_image, (3, 3), 0)
+    
+    # Detección de bordes Sobel
+    Gx = cv2.Sobel(blurred_image, cv2.CV_64F, 1, 0, ksize=3)
+    Gy = cv2.Sobel(blurred_image, cv2.CV_64F, 0, 1, ksize=3)
+    
+    # Magnitud del gradiente
+    G = np.sqrt(Gx**2 + Gy**2)
+    G = np.uint8(255 * G / np.max(G))
+    
+    # Detección Laplaciana
+    laplacian = cv2.Laplacian(blurred_image, cv2.CV_64F)
+    laplacian_abs = cv2.convertScaleAbs(laplacian)
+    
+    # Detección Canny
+    edges = cv2.Canny(blurred_image, 100, 200)
+    
+    # Cálculo de HOG
+    features, hog_image = hog(
+        gray_image,
+        orientations=9,
+        pixels_per_cell=(8, 8),
+        cells_per_block=(2, 2),
+        visualize=True,
+        channel_axis=None
+    )
+    hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
+    
+    # Visualización
+    plt.figure(figsize=(15, 10))
+    
+    plt.subplot(2, 3, 1)
+    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    plt.title('Original')
+    
+    plt.subplot(2, 3, 2)
+    plt.imshow(G, cmap='gray')
+    plt.title('Sobel')
+    
+    plt.subplot(2, 3, 3)
+    plt.imshow(laplacian_abs, cmap='gray')
+    plt.title('Laplacian')
+    
+    plt.subplot(2, 3, 4)
+    plt.imshow(edges, cmap='gray')
+    plt.title('Canny')
+    
+    plt.subplot(2, 3, 5)
+    plt.imshow(hog_image_rescaled, cmap='gray')
+    plt.title('HOG')</code></pre>
+                    </div>
+                </div>
+
+                <div class="code-section javascript">
+                    <h3>🌐 Implementación en JavaScript</h3>
+                    <div class="code-block">
+                        <pre><code>// Función para escala de grises
+function rgbaToGrayscale(imageData) {
+    const data = imageData.data;
+    const grayData = new Uint8ClampedArray(data.length);
+    
+    for (let i = 0; i < data.length; i += 4) {
+        const gray = (data[i] + data[i + 1] + data[i + 2]) / 3;
+        grayData[i] = grayData[i + 1] = grayData[i + 2] = gray;
+        grayData[i + 3] = 255;
+    }
+    return new ImageData(grayData, imageData.width, imageData.height);
+}
+
+// Desenfoque Gaussiano
+function gaussianBlur(imageData) {
+    const kernel = [
+        [1/16, 2/16, 1/16],
+        [2/16, 4/16, 2/16],
+        [1/16, 2/16, 1/16]
+    ];
+    const data = imageData.data;
+    const width = imageData.width;
+    const height = imageData.height;
+    const blurredData = new Uint8ClampedArray(data.length);
+    
+    for (let y = 1; y < height - 1; y++) {
+        for (let x = 1; x < width - 1; x++) {
+            let sum = 0;
+            for (let ky = -1; ky <= 1; ky++) {
+                for (let kx = -1; kx <= 1; kx++) {
+                    const idx = ((y + ky) * width + (x + kx)) * 4;
+                    sum += data[idx] * kernel[ky + 1][kx + 1];
+                }
+            }
+            const idx = (y * width + x) * 4;
+            blurredData[idx] = blurredData[idx + 1] = 
+            blurredData[idx + 2] = sum;
+            blurredData[idx + 3] = 255;
+        }
+    }
+    return new ImageData(blurredData, width, height);
+}
+
+// Detección Sobel
+function sobelEdgeDetection(imageData) {
+    const kernelX = [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]];
+    const kernelY = [[-1, -2, -1], [0, 0, 0], [1, 2, 1]];
+    const width = imageData.width;
+    const height = imageData.height;
+    const data = imageData.data;
+    const edgeData = new Uint8ClampedArray(data.length);
+    
+    for (let y = 1; y < height - 1; y++) {
+        for (let x = 1; x < width - 1; x++) {
+            let gx = 0, gy = 0;
+            
+            for (let ky = -1; ky <= 1; ky++) {
+                for (let kx = -1; kx <= 1; kx++) {
+                    const idx = ((y + ky) * width + (x + kx)) * 4;
+                    gx += data[idx] * kernelX[ky + 1][kx + 1];
+                    gy += data[idx] * kernelY[ky + 1][kx + 1];
+                }
+            }
+            
+            const magnitude = Math.sqrt(gx * gx + gy * gy);
+            const idx = (y * width + x) * 4;
+            const value = Math.min(255, magnitude);
+            
+            edgeData[idx] = edgeData[idx + 1] = 
+            edgeData[idx + 2] = value;
+            edgeData[idx + 3] = 255;
+        }
+    }
+    return new ImageData(edgeData, width, height);
+}
+
+// Detección Laplaciana
+function laplacianEdgeDetection(imageData) {
+    const kernel = [[0, 1, 0], [1, -4, 1], [0, 1, 0]];
+    const width = imageData.width;
+    const height = imageData.height;
+    const data = imageData.data;
+    const edgeData = new Uint8ClampedArray(data.length);
+    
+    for (let y = 1; y < height - 1; y++) {
+        for (let x = 1; x < width - 1; x++) {
+            let sum = 0;
+            for (let ky = -1; ky <= 1; ky++) {
+                for (let kx = -1; kx <= 1; kx++) {
+                    const idx = ((y + ky) * width + (x + kx)) * 4;
+                    sum += data[idx] * kernel[ky + 1][kx + 1];
+                }
+            }
+            const idx = (y * width + x) * 4;
+            const value = Math.min(255, Math.abs(sum));
+            edgeData[idx] = edgeData[idx + 1] = 
+            edgeData[idx + 2] = value;
+            edgeData[idx + 3] = 255;
+        }
+    }
+    return new ImageData(edgeData, width, height);
+}
+
+// Detección Canny
+function cannyEdgeDetection(imageData) {
+    const sobelResult = sobelEdgeDetection(imageData);
+    const data = sobelResult.data;
+    const width = sobelResult.width;
+    const height = sobelResult.height;
+    const edgeData = new Uint8ClampedArray(data.length);
+    
+    const highThreshold = 100;
+    const lowThreshold = 50;
+    
+    for (let i = 0; i < data.length; i += 4) {
+        const magnitude = data[i];
+        const value = magnitude > highThreshold ? 255 : 
+                     magnitude > lowThreshold ? 128 : 0;
+        edgeData[i] = edgeData[i + 1] = 
+        edgeData[i + 2] = value;
+        edgeData[i + 3] = 255;
+    }
+    return new ImageData(edgeData, width, height);
+}
+
+// Cálculo HOG
+function calculateHOG(imageData) {
+    const width = imageData.width;
+    const height = imageData.height;
+    const cellSize = 8;
+    const data = imageData.data;
+    const hogData = new Uint8ClampedArray(data.length);
+    
+    for (let y = 1; y < height - 1; y++) {
+        for (let x = 1; x < width - 1; x++) {
+            const idx = (y * width + x) * 4;
+            
+            const gx = data[idx + 4] - data[idx - 4];
+            const gy = data[idx + width * 4] - data[idx - width * 4];
+            
+            const magnitude = Math.sqrt(gx * gx + gy * gy);
+            const angle = Math.atan2(gy, gx) * 180 / Math.PI;
+            
+            hogData[idx] = hogData[idx + 1] = 
+            hogData[idx + 2] = Math.min(255, magnitude);
+            hogData[idx + 3] = 255;
+        }
+    }
+    return new ImageData(hogData, width, height);
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/edgeDetection.js"></script>
+</body>
+</html>
