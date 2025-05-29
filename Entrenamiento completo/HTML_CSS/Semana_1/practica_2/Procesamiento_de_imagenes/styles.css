@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
 }
 
-/* Header mejorado */
+/* Header */
 .header {
     background: linear-gradient(to right, #ffffff, #f8f9fa);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
