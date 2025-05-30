@@ -1,0 +1,367 @@
+/*====================================
+  HEADER AND NAVIGATION STYLES
+=====================================*/
+header {
+    display: flex;
+    background-color: #f8f9fa;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    width: auto;
+}
+
+/* Navigation Menu */
+nav {
+    display: inline-flex;
+    justify-self: flex-end;
+    height: 68px;
+    width: 811px;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    width: 811px;
+    margin-right: 100px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Logo Styles */
+.logo {
+    height: 56px;
+    width: 219.54px;
+    object-fit: contain;
+    margin-left: 100px;
+}
+
+/*====================================
+  BUTTON STYLES
+=====================================*/
+.btn-primary {
+    width: 231px;
+    height: 68px;
+    border: 1px solid #000;
+    border-radius: 14px;
+}
+
+.btn-secondary {
+    height: 68px;
+    width: 264px;
+    font-family: 'space grotesk', sans-serif;
+    border: #000 1px solid;
+    border-radius: 14px;
+    background-color: #020202;
+    color: #f8f9fa;
+}
+
+/*====================================
+  HERO SECTION STYLES
+=====================================*/
+.Description {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    height: 515px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Description-content {
+    margin-left: 100px;
+    height: 481px;
+    width: 531px;
+    font-family: 'space grotesk', sans-serif;
+}
+
+.Description-title {
+    text-align: left;
+    height: 231px;
+    width: 531px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 65px;
+}
+
+.Description-text {
+    height: 112px;
+    width: 498px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.Description-text p {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.Illustration-img {
+    height: 515px;
+    width: 600px;
+    object-fit: contain;
+    justify-self: flex-end;
+    margin-right: 100px;
+}
+
+/*====================================
+  COMPANY LOGOS SECTION
+=====================================*/
+.logos {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.logos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos-img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    margin-left: 100px;
+}
+
+/*====================================
+  SERVICES SECTION
+=====================================*/
+.Services {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+/* Services Header */
+.Services-information {
+    display: inline-flex;
+    font-family: 'space grotesk', sans-serif;
+    height: 51px;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.Services-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-family: 'space grotesk', sans-serif;
+    color: #020202;
+    background: #b9ff66;
+    height: 51px;
+    width: 178px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #f8f9fa 1px solid;
+    border-radius: 14px;
+}
+
+.Services-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    width: 580px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+/* Services Cards Grid */
+.Services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    margin-top: 40px;
+    width: auto;
+    height: auto;
+    gap: 40px;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+/* Individual Service Card Styles */
+.Service-card {
+    height: 310px;
+    width: 600px;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 45px;
+    border: #000 1px solid;
+    border-bottom: #000 4px solid;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.Service-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+/* Card Title Styles */
+.Service-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 0;
+    max-width: 70%;
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 12px;
+}
+
+/* Card Color Variants */
+.card-gray {
+    background-color: #F3F3F3;
+}
+
+.card-gray h3 {
+    color: #000000;
+    background: #B9FF66;
+}
+
+.card-green {
+    background-color: #B9FF66;
+}
+
+.card-green h3 {
+    color: #000000;
+    background: #FFFFFF;
+}
+
+.card-black {
+    background-color: #000000;
+}
+
+.card-black h3 {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+/* Learn More Button Styles */
+.learn-more {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    margin-top: auto;
+    background: #000000;
+    padding: 8px 16px;
+    border-radius: 30px;
+    color: #FFFFFF;
+}
+
+.card-green .learn-more {
+    background: #000000;
+}
+
+/* Card Illustration Styles */
+.card-illustration {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/*====================================
+  LET'S MAKE THINGS HAPPEN SECTION
+=====================================*/
+.Lets-make-things-happen {
+    margin: 100px;
+    height: 347px;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3F3F3;
+    border-radius: 45px;
+    padding: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Lets-make-things-happen-content {
+    height: auto;
+    width: 500px;
+    font-family: 'space grotesk', sans-serif;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.Lets-make-things-happen-title {
+    font-size: 40px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.Lets-make-things-happen-text {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.Lets-make-things-happen-content .btn-secondary {
+    width: fit-content;
+    padding: 0 30px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Lets-make-things-happen-content .btn-secondary:hover {
+    background-color: #333;
+}
+
+.Lets-make-things-happen-img {
+    height: 395px;
+    width: 359px;
+    object-fit: contain;
+    position: relative;
+    right: 40px;
+    bottom: -40px;
+}
