@@ -151,7 +151,7 @@ body {
     border-radius: 2px;
 }
 
-/* Main Content mejorado */
+/* Main Content */
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -196,7 +196,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Steps mejorados */
+/* Steps */
 .steps-container {
     display: flex;
     flex-direction: column;
@@ -244,7 +244,7 @@ body {
     flex-grow: 1;
 }
 
-/* Tools mejorados */
+/* Tools */
 .tool-item {
     display: flex;
     align-items: center;
@@ -276,7 +276,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Responsive mejorado */
+/* Responsive */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
