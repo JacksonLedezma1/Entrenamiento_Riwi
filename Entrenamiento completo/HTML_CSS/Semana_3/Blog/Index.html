@@ -1,0 +1,196 @@
+<!-- Blog o Revista en Línea:
+
+Descripción: Un sitio para publicar artículos, noticias o tutoriales sobre un tema específico (tecnología, cocina, viajes, etc.).
+Elementos clave:
+Página principal: Últimos artículos, categorías, destacados.
+Página de artículo: Contenido del artículo, comentarios (simulados o con un diseño para ellos), información del autor.
+Página de categorías: Listado de artículos por categoría.
+Acerca de / Contacto.
+Adaptación con Media Queries:
+1024px: Diseño de blog tradicional con barra lateral, contenido principal en dos columnas.
+768px: La barra lateral puede pasar a la parte inferior del contenido principal, o el contenido principal se adapta a una sola columna más ancha. Imágenes que escalan.
+480px: Todo el contenido en una sola columna. Las imágenes se ajustan al ancho de la pantalla. Posiblemente un menú de navegación simplificado. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Blog</title>
+</head>
+<body>
+     <header class="header">
+        <section class="header-content">
+            <div class="profile-section">
+                <img src="./assets/Logo/Logo.png" alt="Logo Personal" class="logo">
+                <div class="profile-info">
+                    <h3>Jackson Ledezma</h3>
+                    <p class="subtitle">Desarrollador Web</p>
+                    <p class="bio">Apasionado por la tecnología y el desarrollo web</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/JacksonLedezma1" target="_blank" class="social-link github">
+                    <img src="./assets/Logo/GitHub.png" alt="GitHub" class="social-icons">
+                    <span class="social-name">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/jackson-olier-ledezma-murillo-881b88255/" target="_blank" class="social-link linkedin">
+                    <img src="./assets/Logo/Linkedin.png" alt="LinkedIn" class="social-icons">
+                    <span class="social-name">LinkedIn</span>
+                </a>
+                <a href="https://www.instagram.com/jackson_ledezma01/" target="_blank" class="social-link instagram">
+                    <img src="./assets/Logo/Instagram.png" alt="Instagram" class="social-icons">
+                    <span class="social-name">Instagram</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="navigation-section">
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#articles">Artículos</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar artículos..." class="search-input">
+                    <button class="search-button">Buscar</button>
+                </div>
+            </nav>
+        </section>
+    </header>
+    
+    <main>
+        <!-- Sección de presentación -->
+        <section class="Presentation-section">
+            <h1>Blog Post</h1>
+            <p>Explora artículos sobre desarrollo web, tecnología y más.</p>
+        </section>
+        <!-- Sección de artículos -->
+        <section class="articles-section" id="articles">
+            <div class="side-bar">
+                <h2>Categorías</h2>
+                <ul class="categories-list">
+                    <li><a href="#web-development">Desarrollo Web</a></li>
+                    <li><a href="#technology">Tecnología</a></li>
+                    <li><a href="#general">Y Más (General / Innovación)</a></li>
+                </ul>
+            </div>
+            <div class="articles-content">
+                <!-- Desarrollo Web -->
+                <section id="web-development" class="category-section">
+                    <h2>Desarrollo Web</h2>
+                    <article class="article-item">
+                        <img src="./assets/img_article/Dev_web.png" alt="CSS Grid vs Flexbox" class="article-image">
+                        <h3>CSS Grid vs. Flexbox: ¿Cuándo usar cada uno en tus diseños Responsive?</h3>
+                        <p>En el mundo del desarrollo web, la creación de diseños adaptables es fundamental. Para lograrlo, CSS Grid y Flexbox se han consolidado como herramientas indispensables, ofreciendo un control sin precedentes sobre la disposición de los elementos. Sin embargo, la pregunta recurrente es: ¿cuál usar y cuándo? Comprender las fortalezas de cada uno y cómo se complementan es clave para construir interfaces de usuario robustas y escalables.</p>
+                        <p>Flexbox sobresale en la alineación y distribución de elementos en una única dimensión, ya sea fila o columna. Es perfecto para componentes como barras de navegación, alineación de elementos dentro de una tarjeta o la creación de formularios flexibles. Por otro lado, CSS Grid está diseñado para diseños bidimensionales, permitiéndonos estructurar la página entera en filas y columnas complejas, creando layouts intrincados con facilidad y precisión. A menudo, la solución más potente implica la combinación de ambos: usar Grid para el macro-layout de la página y Flexbox para organizar los elementos dentro de las celdas de ese grid.</p>
+                        <p>Dominar tanto CSS Grid como Flexbox no solo optimizará tu flujo de trabajo, sino que también te permitirá crear diseños responsive más eficientes y elegantes. La elección no es una cuestión de "uno u otro", sino de entender cómo explotar sus capacidades únicas para resolver los desafíos de diseño específicos de cada componente de tu UI.</p>
+                    </article>
+                    <article class="article-item">
+                        <img src="./assets/img_article/html_semantico.png" alt="HTML Semántico y Accesibilidad" class="article-image">
+                        <h3>Más allá de HTML semántico: Optimizando tu estructura para el SEO y la accesibilidad</h3>
+                        <p>El HTML semántico va más allá de simplemente mostrar contenido; se trata de dotar de significado a la estructura de tu página, tanto para los navegadores como para los motores de búsqueda y, crucialmente, para los usuarios con diferentes capacidades. Una estructura HTML bien pensada no solo impulsa tu posicionamiento en las SERP (páginas de resultados de búsqueda), sino que también garantiza que tu sitio sea usable y accesible para todos, incluyendo aquellos que dependen de tecnologías de asistencia.</p>
+                        <p>La correcta utilización de etiquetas HTML5 como &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;footer&gt; y &lt;aside&gt; no es una mera formalidad. Estas etiquetas proporcionan un mapa claro de tu contenido, permitiendo a los crawlers indexar tu sitio de manera más efectiva y a los lectores de pantalla navegar la página con lógica. Además, la implementación de roles ARIA (Accessible Rich Internet Applications) es vital para añadir semántica donde HTML no la proporciona de forma nativa, mejorando la interacción para usuarios con discapacidades. Por ejemplo, al usar role="button" o aria-label en elementos personalizados, garantizamos que su función sea comprendida.</p>
+                        <p>En resumen, invertir tiempo en una estructura HTML semántica y accesible es una inversión en la calidad y el alcance de tu sitio web. No solo cumplirás con las mejores prácticas de desarrollo, sino que también construirás una experiencia inclusiva que beneficie a todos los usuarios, mejorando simultáneamente tu visibilidad en línea.</p>
+                    </article>
+                    <article class="article-item">
+                        <img src="./assets/img_article/web_components.png" alt="Web Components" class="article-image">
+                        <h3>Introducción a Web Components: Construyendo componentes reutilizables y encapsulados</h3>
+                        <p>En la evolución del desarrollo frontend, la necesidad de crear interfaces modulares, reutilizables y con un rendimiento óptimo ha llevado a la popularización de los Web Components. Esta suite de estándares W3C permite a los desarrolladores construir componentes personalizados y encapsulados, que pueden ser utilizados en cualquier framework de JavaScript, o incluso sin ninguno, promoviendo la interoperabilidad y la consistencia en el diseño.</p>
+                        <p>Los Web Components se basan en cuatro tecnologías principales: Custom Elements (para definir nuevas etiquetas HTML), Shadow DOM (para encapsular estilos y estructura, evitando conflictos), HTML Templates (para definir fragmentos de HTML reutilizables) y ES Modules (para importar y exportar componentes). Al combinar estas piezas, podemos crear elementos UI complejos que operan de forma independiente, sin interferir con el resto del documento. Por ejemplo, podríamos definir un &lt;my-custom-button&gt; con su propio estilo y comportamiento, que se renderice siempre igual, sin importar dónde se utilice en la aplicación.</p>
+                        <p>Adoptar Web Components te abre la puerta a un sistema de diseño más robusto y a la creación de bibliotecas de componentes que pueden ser compartidas y mantenidas con mayor facilidad. Son una herramienta poderosa para escalar proyectos grandes y asegurar la coherencia visual y funcional a lo largo de tu aplicación.</p>
+                    </article>
+                    <article class="article-item">
+                        <img src="./assets/img_article/webassembly.png" alt="WebAssembly y WASM" class="article-image">
+                        <h3>El futuro del Frontend: WebAssembly, WASM y la velocidad de la web</h3>
+                        <p>La web moderna exige rendimiento y capacidad de respuesta sin precedentes. Mientras JavaScript ha sido el rey indiscutible del frontend, la llegada de WebAssembly (WASM) marca un hito significativo, prometiendo llevar aplicaciones de alto rendimiento, escritas en lenguajes como C++, Rust o C#, directamente al navegador. Este nuevo formato de código binario compacto no es un reemplazo de JavaScript, sino un complemento potente que abre nuevas posibilidades.</p>
+                        <p>WebAssembly permite ejecutar código compilado con una velocidad casi nativa, superando las limitaciones de rendimiento de JavaScript en tareas computacionalmente intensivas. Esto es particularmente relevante para aplicaciones exigentes como juegos 3D, edición de video en el navegador, simulaciones complejas o incluso aplicaciones de realidad aumentada. Su diseño modular y su integración con el ecosistema web existente lo convierten en una tecnología de vanguardia que ya está siendo adoptada por gigantes como Google y Mozilla para mejorar la experiencia de usuario en sus plataformas.</p>
+                        <p>Si bien JavaScript seguirá siendo fundamental para la interactividad y la manipulación del DOM, WASM se perfila como la solución para los cuellos de botella de rendimiento. Entender su potencial y sus casos de uso es clave para cualquier desarrollador frontend que desee estar a la vanguardia de las tecnologías web del mañana.</p>
+                    </article>
+                </section>
+                <!-- Tecnología -->
+                <section id="technology" class="category-section">
+                    <h2>Tecnología</h2>
+                    <article class="article-item">
+                        <img src="./assets/img_article/ia_generativa.png" alt="IA Generativa" class="article-image">
+                        <h3>La IA generativa en la vida cotidiana: Más allá de ChatGPT</h3>
+                        <p>La inteligencia artificial generativa ha capturado la imaginación global, y herramientas como ChatGPT son solo la punta del iceberg de su potencial transformador. Esta rama de la IA se enfoca en crear contenido nuevo y original, desde texto e imágenes hasta música y código, y su impacto ya se siente en casi todos los aspectos de nuestra vida cotidiana, a menudo de formas que ni siquiera percibimos.</p>
+                        <p>Más allá de la conversación y la redacción, la IA generativa está revolucionando industrias enteras. En el diseño, herramientas como Midjourney o DALL-E permiten a los artistas generar obras visuales complejas a partir de simples descripciones de texto. En la música, algoritmos pueden componer melodías y acompañamientos. Incluso en campos como la medicina, se utiliza para simular nuevas moléculas o diseñar tratamientos. Esta capacidad para "crear" está democratizando el acceso a la producción de contenido y automatizando tareas repetitivas, liberando a los profesionales para enfocarse en la creatividad y la estrategia.</p>
+                        <p>Estamos en el umbral de una era donde la IA generativa no es solo una curiosidad tecnológica, sino una herramienta fundamental que redefine la interacción humana con la información y la creatividad. Su integración silenciosa en nuestras aplicaciones y servicios diarios es un testimonio de su creciente influencia y su promesa de un futuro donde la máquina y el humano colaboran de maneras sin precedentes.</p>
+                    </article>
+                    <article class="article-item">
+                        <img src="./assets/img_article/ciberseguridad.png" alt="Ciberseguridad para desarrolladores" class="article-image">
+                        <h3>Ciberseguridad básica para desarrolladores: Protege tu código y tus datos</h3>
+                        <p>En el panorama digital actuales, la ciberseguridad no es solo una preocupación para los equipos de TI; es una responsabilidad inherente a cada desarrollador. Construir aplicaciones seguras desde el principio es fundamental para proteger tanto la integridad del código como la privacidad de los datos de los usuarios. Ignorar las mejores prácticas de seguridad puede tener consecuencias devastadoras, desde filtraciones de datos hasta la paralización de servicios.</p>
+                        <p>Conceptos como la prevención de SQL Injection o la mitigación de ataques XSS (Cross-Site Scripting) son solo el punto de partida. Un desarrollador consciente de la seguridad implementa validaciones rigurosas en la entrada de datos, utiliza prepared statements para consultas a bases de datos, y asegura que todas las comunicaciones se realicen a través de HTTPS. Además, implementar políticas de autenticación y autorización robustas, con contraseñas seguras y verificación de dos factores, es crucial para proteger el acceso a los sistemas y datos sensibles. La auditoría regular del código y el uso de herramientas de análisis de seguridad también son prácticas recomendadas.</p>
+                        <p>La ciberseguridad es un campo en constante evolución, y mantenerse actualizado con las últimas amenazas y mejores prácticas es vital. Al integrar la seguridad en cada etapa del ciclo de vida del desarrollo, los desarrolladores no solo protegen sus creaciones, sino que también construyen la confianza con sus usuarios y contribuyen a un ecosistema digital más seguro para todos.</p>
+                    </article>
+                    <article class="article-item">
+                        <img src="./assets/img_article/computacion_cuantica.png" alt="Computación Cuántica" class="article-image">
+                        <h3>El Auge de la Computación Cuántica: ¿Qué significa para el mañana de la tecnología?</h3>
+                        <p>La computación cuántica ha pasado de ser un concepto de ciencia ficción a una frontera tangible de la tecnología, prometiendo resolver problemas que están más allá de la capacidad de los superordenadores actuales. A diferencia de las computadoras clásicas que utilizan bits (0 o 1), las computadoras cuánticas emplean qubits, que pueden representar 0, 1 o una superposición de ambos simultáneamente. Esta propiedad, junto con fenómenos como el entrelazamiento cuántico, les otorga un poder de procesamiento exponencialmente mayor.</p>
+                        <p>Aunque todavía estamos en las primeras etapas, el potencial de la computación cuántica es inmenso. Podría revolucionar campos como la criptografía (rompiendo los cifrados actuales), el descubrimiento de fármacos y materiales (simulando interacciones moleculares con una precisión sin precedentes), la optimización de algoritmos complejos y la inteligencia artificial avanzada. Empresas como IBM y Google ya están desarrollando prototipos funcionales, y la investigación a nivel mundial avanza a pasos agigantados, aunque los desafíos técnicos y de coherencia cuántica aún son considerables.</p>
+                        <p>La computación cuántica no reemplazará a la computación clásica en todas las aplicaciones, pero sin duda abrirá un nuevo paradigma para problemas específicos de gran complejidad. Mantenerse informado sobre su progreso es esencial para comprender las futuras olas de innovación tecnológica y cómo moldearán el mundo del mañana.</p>
+                    </article>
+                </section>
+                <!-- Y Más (General / Innovación) -->
+                <section id="general" class="category-section">
+                    <h2>Y Más (General / Innovación)</h2>
+                    <article class="article-item">
+                        <img src="./assets/img_article/freelance_tech.png" alt="Freelance Tech y Marca Personal" class="article-image">
+                        <h3>Freelance Tech: Cómo construir tu marca personal como desarrollador independiente</h3>
+                        <p>La flexibilidad y la autonomía que ofrece el trabajo freelance en tecnología atraen a muchos desarrolladores, pero construir una carrera exitosa como independiente va más allá de solo tener habilidades técnicas. Es crucial establecer una marca personal sólida que te diferencie en un mercado competitivo, atraiga a los clientes adecuados y genere oportunidades de crecimiento a largo plazo. Tu marca personal es tu reputación, tu estilo y lo que te hace único.</p>
+                        <p>Construir una marca personal implica ser visible y vocal sobre tu experiencia. Esto puede incluir crear un portafolio en línea impecable con tus mejores proyectos, participar activamente en comunidades de desarrollo, contribuir a proyectos de código abierto, o compartir tus conocimientos a través de un blog (¡como este!) o redes sociales profesionales como LinkedIn y Twitter. Es fundamental definir tu nicho, entender tu propuesta de valor y comunicar claramente cómo puedes resolver los problemas de tus clientes. La consistencia en tu mensaje y la calidad en tu trabajo son los pilares.</p>
+                        <p>Convertirse en un desarrollador freelance exitoso requiere no solo maestría técnica, sino también habilidades de marketing personal y gestión de negocios. Al invertir en tu marca personal, no solo atraerás a mejores clientes, sino que también construirás una carrera más gratificante y resiliente.</p>
+                    </article>
+                    <article class="article-item">
+                        <img src="./assets/img_article/productividad_devs.png" alt="Productividad para Devs" class="article-image">
+                        <h3>Productividad para Devs: Herramientas y técnicas para maximizar tu eficiencia</h3>
+                        <p>En el dinámico mundo del desarrollo de software, la productividad es la clave para entregar código de calidad, cumplir plazos y mantener un equilibrio saludable entre el trabajo y la vida personal. Con la infinidad de distracciones y la complejidad inherente a la programación, es esencial adoptar herramientas y técnicas que optimicen tu flujo de trabajo y te permitan mantener el enfoque en las tareas más importantes.</p>
+                        <p>Desde la elección de un IDE (Integrated Development Environment) robusto y configurado a tu medida (como VS Code, IntelliJ IDEA o Sublime Text) hasta la implementación de metodologías como Pomodoro (trabajar en bloques de tiempo concentrados seguidos de descansos cortos) o Time Blocking (asignar bloques específicos en tu calendario para tareas concretas), existen múltiples enfoques. Herramientas de gestión de proyectos como Trello, Jira o Asana, y sistemas de control de versiones como Git, son indispensables para la colaboración y el seguimiento del progreso. Además, automatizar tareas repetitivas mediante scripts o herramientas de línea de comandos puede liberar un tiempo valioso.</p>
+                        <p>En última instancia, la productividad no se trata de trabajar más horas, sino de trabajar de forma más inteligente. Experimentar con diferentes herramientas y técnicas te permitirá encontrar lo que mejor se adapta a tu estilo de trabajo, maximizando tu eficiencia y, lo que es más importante, tu satisfacción en el proceso de desarrollo.</p>
+                    </article>
+                    <article class="article-item">
+                        <img src="./assets/img_article/habilidades_blancas.png" alt="Habilidades Blandas en Tech" class="article-image">
+                        <h3>Más allá del Código: Habilidades Blandas esenciales para el éxito en Tech</h3>
+                        <p>En la industria tecnológica, a menudo nos enfocamos exclusivamente en las habilidades técnicas: lenguajes de programación, frameworks, algoritmos. Sin embargo, el verdadero éxito profesional, la progresión de carrera y la capacidad de influir y liderar, dependen cada vez más de las habilidades blandas (soft skills). Estas competencias interpersonales y de comunicación son tan cruciales como tu destreza en la codificación, si no más.</p>
+                        <p>La comunicación efectiva es fundamental, ya sea para explicar una solución técnica a un cliente no técnico, colaborar con un equipo multidisciplinario o presentar una nueva característica. La resolución de problemas no se limita a depurar código; implica pensamiento crítico, creatividad y la capacidad de abordar desafíos complejos de manera estructurada. El trabajo en equipo y la colaboración son pilares en entornos ágiles, requiriendo empatía, capacidad de dar y recibir feedback constructivo y una actitud proactiva. Además, la adaptabilidad, la gestión del tiempo y el liderazgo son habilidades que diferencian a los desarrolladores promedio de aquellos que se convierten en verdaderos referentes.</p>
+                        <p>Invertir en el desarrollo de tus habilidades blandas te convertirá en un profesional más completo, valorado y adaptable. No solo te permitirá navegar mejor en la complejidad del entorno laboral, sino que también te abrirá puertas a roles de mayor responsabilidad y un impacto significativo en cualquier proyecto o equipo.</p>
+                    </article>
+                </section>
+            </div>
+        </section>
+        <section class="spacer-section"></section>
+        <!-- Sección de acerca de -->
+        <section class="about-section" id="about">
+            <h2>Acerca de</h2>
+            <p>Este blog es un espacio para compartir conocimientos, experiencias y reflexiones sobre el mundo del desarrollo web y la tecnología. Aquí encontrarás artículos sobre las últimas tendencias, tutoriales prácticos y mucho más.</p>
+            <p>Mi objetivo es crear contenido útil y accesible para todos, desde principiantes hasta expertos. Espero que disfrutes leyendo tanto como yo disfruto escribiendo.</p>
+        </section>
+        <section class="spacer-section"></section>
+        <!-- Sección de contacto -->
+        <section class="contact-section" id="contact">
+            <h2>Contacto</h2>
+            <p>Si tienes alguna pregunta, sugerencia o simplemente quieres saludar, no dudes en contactarme.</p>
+            <form class="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
