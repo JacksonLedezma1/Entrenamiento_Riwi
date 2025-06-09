@@ -1,4 +1,14 @@
 # Test of HTML and CSS
+**Clan:** linus
+
+**Nombre:** Jackson Olier Ledezma Murillo
+
+**Correo:** jacksonledezma01@gmail.com
+
+**Documento de indentidad:** cc. 1003970765
+
+**What's in the deliverable:**
+
 - **Index:** In index, i have information about what like me, and my aspiration. the header and footer have some information for my, i mean that is my watermark and is equial for all pages.
 
 - **About:** In About, i have information for me, and nothing else.
