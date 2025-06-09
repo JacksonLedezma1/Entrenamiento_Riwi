@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jackson Ledezma's Portfolio</title>
+</head>
+<body>
+        <!-- Header, it's the same on all pages -->
+        <header>
+            <section class="header-content">
+                    <div class="profile-section">
+                        <img src="./assets/logo/Logo.png" alt="Logo Personal" class="logo">
+                        <div class="profile-info">
+                            <h3>Jackson Ledezma</h3>
+                            <p class="subtitle">Software dev</p>
+                            <p class="bio">Passionate about technology</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/JacksonLedezma1" target="_blank" class="social-link github">
+                            <img src="./assets/logo/GitHub.png"GitHub" class="social-icons">
+                            <span class="social-name">GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/jackson-olier-ledezma-murillo-881b88255/" target="_blank" class="social-link linkedin">
+                            <img src="./assets/logo/Linkedin.png" alt="LinkedIn" class="social-icons">
+                            <span class="social-name">LinkedIn</span>
+                        </a>
+                        <a href="https://www.instagram.com/jackson_ledezma01/" target="_blank" class="social-link instagram">
+                            <img src="./assets/logo/Instagram.png" alt="Instagram" class="social-icons">
+                            <span class="social-name">Instagram</span>
+                        </a>
+                    </div>
+            </section>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="contact">
+                <h2>Contact Me</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>Email: jacksonledezma01@gmail.com</p>
+                        <p>Phone: +57 (314) 6930948</p>
+                        <p>Location: Medellín, Colombia</p>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <h3>Send me a message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Jackson Ledezma. All rights reserved.</p>
+        </footer>
+</body>
+</html>
