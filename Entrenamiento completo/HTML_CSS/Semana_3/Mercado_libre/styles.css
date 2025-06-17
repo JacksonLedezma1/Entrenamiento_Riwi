@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.up{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffe600;
+  padding: 0% 5%;
+}
+.under{
+  background-color: #ffe600;
+  padding: 0% 2.5%;
+}
+
+.logo img {
+  height: 40px;
+  padding: 10px 20px;
+}
+
+.search-bar input {
+  width: 400px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.envio-gratis {
+  padding: 8px 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffe600;
+  padding: 10px 20px;
+}
+
+.menu-ubicacion{
+  display: flex;
+  flex-direction: row;
+}
+
+.pequeñas{
+  font-size: small;
+}
+.ubicacion p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.menu li :hover{
+  text-decoration: underline black 2px;
+
+}
+
+.hero {
+  background: linear-gradient(to right, #fff100, #ffe600);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.hero button {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 10px;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  width: 180px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}

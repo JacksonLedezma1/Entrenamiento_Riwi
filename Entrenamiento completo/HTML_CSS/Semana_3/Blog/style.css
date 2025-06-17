@@ -362,13 +362,13 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    box-sizing: border-box;
-    background-color: #f7f9fb;
+    box-sizing: border-box; 
     border-radius: 18px;
     box-shadow: 0 4px 24px 0 rgba(44,62,80,0.08), 0 1.5px 6px 0 rgba(44,62,80,0.04);
     padding: 2.5rem 2rem;
     position: r;
     align-items: flex-start;
+
 }
 
 .side-bar {
