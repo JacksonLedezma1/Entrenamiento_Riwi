@@ -4,10 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
-    <title>Document</title>
+    <title>Validation System</title>
 </head>
 <body>
-        
+    <div class="container">
+        <h1>Validation System</h1>
+        <form id="validationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="Edad">Edad:</label>
+            <input type="number" id="Edad" name="Edad" min="0" max="120">
+
+            <button type="submit" id="boton">Submit</button>
+        </form>
+        <div class="result" id="result">
+            <h2>Validation Result</h2>
+            <p id="resultMessage"></p>
+        </div>
+    </div>
 </body>
 </html>
-<script href="./taller_js_jackson.js"></script>
+<script src="./sistema_interactivo.js"></script>

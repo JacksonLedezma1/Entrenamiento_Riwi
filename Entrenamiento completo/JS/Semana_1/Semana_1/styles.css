@@ -1,0 +1,77 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    gap: 20px;
+     border: 1px solid #ddd;
+}
+.container h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+.container form{
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+}
+.container form label {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.container form input[type="text"],
+.container form input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+.container form input[type="text"]:focus,
+.container form input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+.container form button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.container form button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+.container form button[type="submit"]:active {
+    background-color: #1c5980;
+}
+.result {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    font-size: 18px;
+    text-align: center;
+}
