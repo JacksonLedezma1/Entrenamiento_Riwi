@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Data Management</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Data <span>Management</span></div>
+        <nav class="nav">
+            <a href="#">Product</a>
+            <button class="buy-now">Buy Now</button>
+            <span class="menu-icon">&#9776;</span>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="product-info">
+            <h2>Product Name</h2>
+            <hr>
+            <p class="description">
+                Product description. Relevant information about the selected or added product will appear here.
+            </p>
+            <div class="specification">
+                <strong>Specifications:</strong> 
+                <span>
+                    Product specifications. List main features, materials, size, etc.
+                </span>
+            </div>
+        </section>
+        <section class="add-product-section">
+            <h2>Add a new product</h2>
+            <form id="addProductForm">
+                <input type="text" id="productName" placeholder="Product name" required />
+                <input type="number" id="ID" placeholder="ID" required />
+                <input type="number" id="Price" placeholder="Price" required />
+                <input type="text" id="productSpec" placeholder="Specification" required />
+                <textarea id="productDesc" placeholder="Description" required></textarea>
+                <label for="productCategory">Category:</label>
+                <select id="productCategory">
+                    <option value="Electronics">Electronics</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="new">New category...</option>
+                </select>
+                <input type="text" id="newCategory" placeholder="Enter new category" style="display:none;" />
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+        <section id="productsContainer"></section>
+    </main>
+</body>
+<script src="./gestion_datos.js"></script>
+</html>
+
+
