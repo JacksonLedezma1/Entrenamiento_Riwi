@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica Fetch API</title>
+</head>
+<body>
+  <h1>Lista de Usuarios</h1>
+  <ul id="listaUsuarios"></ul>
+
+  <h2>Agregar Usuario</h2>
+  <input type="text" id="nombre" placeholder="Nombre">
+  <input type="number" id="edad" placeholder="Edad">
+  <button onclick="agregarUsuario()">Agregar</button>
+
+  <script>
+    const API_URL = 'http://localhost:3000/usuarios';
+
+    function cargarUsuarios() {
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(usuarios => {
+          const lista = document.getElementById('listaUsuarios');
+          lista.innerHTML = '';
+          usuarios.forEach(u => {
+            const li = document.createElement('li');
+            li.textContent = `${u.nombre} (${u.edad} años)`;
+            lista.appendChild(li);
+          });
+        });
+    }
+
+    function agregarUsuario() {
+      const nombre = document.getElementById('nombre').value;
+      const edad = parseInt(document.getElementById('edad').value);
+      fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre, edad })
+      })
+      .then(res => res.json())
+      .then(() => {
+        cargarUsuarios();
+      });
+    }
+
+    cargarUsuarios();
+  </script>
+</body>
+</html>
