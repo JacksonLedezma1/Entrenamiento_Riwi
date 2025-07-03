@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Práctica Fetch API</title>
+  <title>Práctica Fetch API con ID</title>
 </head>
 <body>
   <h1>Lista de Usuarios</h1>
@@ -16,6 +16,7 @@
   <script>
     const API_URL = 'http://localhost:3000/usuarios';
 
+    // Función para cargar usuarios y mostrar ID, nombre y edad
     function cargarUsuarios() {
       fetch(API_URL)
         .then(res => res.json())
@@ -24,27 +25,38 @@
           lista.innerHTML = '';
           usuarios.forEach(u => {
             const li = document.createElement('li');
-            li.textContent = `${u.nombre} (${u.edad} años)`;
+            li.textContent = `ID: ${u.id} - ${u.nombre} (${u.edad} años)`;
             lista.appendChild(li);
           });
         });
     }
 
+    // Función para agregar un nuevo usuario, asignando ID por posición
     function agregarUsuario() {
       const nombre = document.getElementById('nombre').value;
       const edad = parseInt(document.getElementById('edad').value);
-      fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, edad })
-      })
-      .then(res => res.json())
-      .then(() => {
-        cargarUsuarios();
-      });
+
+      // Primero obtenemos todos los usuarios para calcular el nuevo ID
+      fetch(API_URL)
+        .then(res => res.json())
+        .then(usuarios => {
+          const nuevoID = usuarios.length + 1; // ID basado en posición
+          const nuevoUsuario = { id: nuevoID, nombre, edad };
+
+          return fetch(API_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(nuevoUsuario)
+          });
+        })
+        .then(res => res.json())
+        .then(() => {
+          cargarUsuarios();
+        });
     }
 
     cargarUsuarios();
   </script>
 </body>
 </html>
+
