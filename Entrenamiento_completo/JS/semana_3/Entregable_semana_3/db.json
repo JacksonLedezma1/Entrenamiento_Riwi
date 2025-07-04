@@ -1,15 +1,21 @@
 {
   "productos": [
     {
-      "id": 1,
+      "id": "0",
       "nombre": "Camisa",
       "precio": 45.99,
       "stock": 10
     },
     {
-      "id": 2,
+      "id": "1",
       "nombre": "Pantalón",
-      "precio": 65.50,
+      "precio": 65.5,
+      "stock": 5
+    },
+    {
+      "id": "2",
+      "nombre": "Suéter",
+      "precio": 25,
       "stock": 5
     }
   ]

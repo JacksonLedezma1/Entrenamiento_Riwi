@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Mini Tienda Online</title>
-  
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <h1>🛍️ Mini Tienda</h1>
   <div id="productos"></div>
 
+  <div class="button-container">
+  <button class="button" id="agregarProducto">🛒 Agregar Producto</button>
+  <button class="button" id="actualizarProducto">✏️ Actualizar Producto</button>
+  <button class="button" id="eliminarProducto">🗑️ Eliminar Producto</button>
+  </div>
+
+  <div class="oculto" id="divProductos"></div>
+
   <h2>🛒 Carrito</h2>
   <ul id="carrito"></ul>
-  <button id="vaciarCarrito">Vaciar Carrito</button>
+  <div id="mensajeCarrito"></div>
+  <button class="button" id="vaciarCarrito">Vaciar Carrito</button>
   <p>Total: <span id="total">0</span></p>
 </body>
 <script src="./gestion_api.js"></script>

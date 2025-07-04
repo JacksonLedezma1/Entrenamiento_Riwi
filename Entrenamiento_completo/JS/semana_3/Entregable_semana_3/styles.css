@@ -1,0 +1,305 @@
+
+
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f6f8fa 60%, #e0f7fa 100%);
+  margin: 0;
+  padding: 0;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main, .container, #divProductos {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 0 16px;
+  box-sizing: border-box;
+}
+
+form {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  padding: 24px 32px 18px 32px;
+  margin-bottom: 24px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+form label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select {
+  border: 1px solid #b2bec3;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  background: #f9f9f9;
+  transition: border 0.2s;
+}
+
+form input:focus, form select:focus {
+  border: 1.5px solid #2d7a5f;
+  outline: none;
+  background: #eafaf1;
+}
+
+form button[type="submit"] {
+  background: #2d7a5f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+form button[type="submit"]:hover {
+  background: #22664a;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.97em;
+  margin-bottom: 2px;
+  min-height: 18px;
+}
+
+.success-message {
+  color: #2d7a5f;
+  font-size: 1.01em;
+  margin-bottom: 2px;
+  min-height: 18px;
+}
+
+#divProductos > div {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  padding: 22px 28px;
+  min-width: 220px;
+  max-width: 420px;
+  margin: 0 auto 24px auto;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+#divProductos > div:hover {
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.16);
+}
+
+h1 {
+  color: #2d7a5f;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+
+#productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+  margin: 30px 0 20px 0;
+  max-width: 1100px;
+}
+
+#productos > div {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  padding: 22px 28px;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#productos > div:hover {
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.16);
+}
+
+#productos p {
+  margin: 0 0 12px 0;
+  font-size: 1.13rem;
+}
+
+#productos button {
+  background: #2d7a5f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 8px;
+}
+
+#productos button:hover {
+  background: #22664a;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.button, .btn, .custom-btn {
+  background: #2d7a5f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  margin: 10px auto;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.07);
+}
+
+.button:hover, .btn:hover, .custom-btn:hover {
+  background: #22664a;
+}
+
+
+h2 {
+  color: #2d7a5f;
+  margin-top: 40px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+
+#carrito {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  padding: 18px 28px;
+  max-width: 420px;
+  margin: 0 auto 20px auto;
+  min-height: 40px;
+  min-width: 250px;
+  list-style: none;
+  text-align: center;
+  font-size: 1.08rem;
+}
+
+#carrito li {
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+
+
+#vaciarCarrito {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px auto 10px auto;
+  display: block;
+  transition: background 0.2s;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(231,76,60,0.07);
+}
+
+#vaciarCarrito:hover {
+  background: #c0392b;
+}
+
+
+p {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0 auto 10px auto;
+}
+
+
+#total {
+  font-weight: bold;
+  color: #2d7a5f;
+  font-size: 1.22rem;
+  letter-spacing: 0.5px;
+}
+
+
+.oculto {
+  display: none !important;
+}
+
+/* Mensajes generales */
+.info-message {
+  color: #1976d2;
+  background: #e3f2fd;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 10px auto 10px auto;
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.05em;
+}
+
+/* Selects generales */
+select {
+  border: 1px solid #b2bec3;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  background: #f9f9f9;
+  transition: border 0.2s;
+}
+select:focus {
+  border: 1.5px solid #2d7a5f;
+  outline: none;
+  background: #eafaf1;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  #productos {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  #productos > div, #divProductos > div, #carrito {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 16px 6vw;
+  }
+  form {
+    max-width: 98vw;
+    padding: 16px 6vw 12px 6vw;
+  }
+}
