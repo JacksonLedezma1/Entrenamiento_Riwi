@@ -1,0 +1,16 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Camisa",
+      "precio": 45.99,
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "nombre": "Pantalón",
+      "precio": 65.50,
+      "stock": 5
+    }
+  ]
+}
