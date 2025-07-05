@@ -122,6 +122,7 @@ h1 {
   max-width: 1100px;
 }
 
+/* Product card styles */
 #productos > div {
   background: #fff;
   border-radius: 12px;
@@ -255,7 +256,7 @@ p {
 }
 
 
-.oculto {
+.hidden {
   display: none !important;
 }
 
