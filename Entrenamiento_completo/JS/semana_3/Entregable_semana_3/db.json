@@ -17,6 +17,12 @@
       "nombre": "Suéter",
       "precio": 5,
       "stock": 5
+    },
+    {
+      "id": "3",
+      "nombre": "samuel",
+      "precio": 1277,
+      "stock": 5
     }
   ]
 }
