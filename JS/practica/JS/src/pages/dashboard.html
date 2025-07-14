@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Administrador</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+  <main>
+    <h2>Gestión de Usuarios y Cursos</h2>
+    <section id="usersSection">
+      <h3>Usuarios</h3>
+      <div id="usersTable"></div>
+      <button id="addUserBtn">Agregar Usuario</button>
+    </section>
+    <section id="coursesSection">
+      <h3>Cursos</h3>
+      <div id="coursesTable"></div>
+      <button id="addCourseBtn">Agregar Curso</button>
+    </section>
+  </main>
+  <script src="../components/header.js"></script>
+  <script src="../components/sidebar.js"></script>
+  <script src="../services/users.js"></script>
+  <script src="../services/courses.js"></script>
+</body>
+</html>
